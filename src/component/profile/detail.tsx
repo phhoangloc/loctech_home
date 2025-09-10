@@ -111,7 +111,6 @@ const DetailProfile = () => {
     useEffect(() => {
         getCategory()
     }, [archive, slug])
-    console.log(body)
 
     return (
         <div className='pb-24'>
@@ -129,7 +128,7 @@ const DetailProfile = () => {
             <div>category</div>
             {
                 archive === "blog" ?
-                    <select className='font-sans w-40 bg-white border border-three/25 h-12 block' onChange={(e) => set_categoryId(Number(e.currentTarget.value))}>
+                    <select className='font-sans w-40 bg-white border border-three/25 h-12 block' value={_categoryId} onChange={(e) => set_categoryId(Number(e.currentTarget.value))}>
                         <option value={0} className='font-sans'>---</option>
                         {_category.map((_cate, index) => <option key={index} value={_cate.id} className='font-sans'>{_cate.name}</option>)}
                     </select> :

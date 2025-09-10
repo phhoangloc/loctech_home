@@ -23,7 +23,6 @@ const ArticleProfile = ({ blogName, limit }: Props) => {
     const [_items, set_items] = useState<ItemType[]>([])
     const getItem = async (position: string, limit: number) => {
         const result = await ApiItemUser({ position, archive: "blog", limit })
-        console.log(result)
         set_items(result.data)
     }
     useEffect(() => {

@@ -35,15 +35,15 @@ const Layout = ({ children }: Props) => {
                         <LoginCard />
                     </div> :
                 <div>
-                    <div className="flex justify-center px-2">
-                        <div className="hidden w-(--lg-md) lg:block pr-2">
+                    <div className="flex justify-center">
+                        <div className="hidden w-(--lg-md) lg:block">
                             <div className="h-12"></div>
                             <MenuComponent />
                         </div>
-                        <div className="w-full max-w-(--md)" >
+                        <div className="w-full max-w-(--md) px-2" >
                             {children}
                         </div>
-                        <div className="hidden xl:block pl-2 w-(--xl-lg)">
+                        <div className="hidden xl:block w-(--xl-lg)">
                             <About />
                         </div>
                     </div>

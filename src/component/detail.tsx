@@ -1,5 +1,4 @@
 import { ItemType } from '@/app/page'
-import axios from 'axios'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import Article from './article'
@@ -28,20 +27,18 @@ const Detail = () => {
         <div className="w-full max-w-(--md)" >
             <div className="h-12"></div>
             <div className=" justify-end text-two/50 text-sm mb-1">{_item?.category?.name} </div>
-            {
-                _item ?
-                    <CardArticleDetail archive={archive} category={_item?.category?.name} name={_item?.name} slug={_item?.slug} content={_item?.content} createAt={_item?.createdAt} author={_item?.host.username} /> :
-                    null
-            }
-            <div className="h-12 flex gap-4">
-                <div className="flex">
-                    <LikeOutline sx="p-2 fill-four" />
-                    <div className="h-full flex flex-col justify-center font-bold text-four">12</div>
-                </div>
-                <div className="">
-                    <Comment sx='p-2 fill-four' />
-                </div>
-            </div>
+            {_item ? <CardArticleDetail archive={archive} category={_item?.category?.name} name={_item?.name} slug={_item?.slug} content={_item?.content} createAt={_item?.createdAt} author={_item?.host.username} /> : null}
+            {archive === "blog" ?
+                <div className="h-12 flex gap-4">
+                    <div className="flex">
+                        <LikeOutline sx="p-2 fill-four" />
+                        <div className="h-full flex flex-col justify-center font-bold text-four">1</div>
+                    </div>
+                    <div className="">
+                        <Comment sx='p-2 fill-four' />
+                    </div>
+                </div> :
+                null}
             {archive === "blog" ? <Article limit={3} /> : <Items archive={archive} limit={3} />}
         </div>
     )

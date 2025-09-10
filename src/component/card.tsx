@@ -26,11 +26,11 @@ export const CardArticleTop = ({ archive, category, name, slug, content, author,
     return (
         <div className="w-full bg-white rounded-md p-2 shadow-md cursor-pointer" onClick={() => toPage.push("/" + archive + "/" + slug)}>
             <div className="text-sm">{moment(createAt).format("YYYY/MM/DD")}</div>
-            <div className='leading-4 pt-1 text-sm opacity-50 font-bold uppercase'>{category}</div>
-            <div className="font-serif text-four font-bold text-xl">{name}</div>
+            {category ? <div className='leading-4 text-sm  font-bold uppercase bg-three text-white w-max rounded-md py-1 px-2 '>{category}</div> : null}
+            <div className="font-serif text-four font-bold text-2xl uppercase">{name}</div>
             <div className="opacity-50 text-xm leading-5">{author}</div>
             <div className="h-4"></div>
-            <div className="h-24 line-clamp-4 text-justify text-sm sm:text-base">{parse(content.split("<p>")[1])}</div>
+            <div className="h-21 line-clamp-4 text-justify text-sm">{parse(content.split("<p>")[1])}</div>
         </div>)
 }
 export const CardArticleProfile = ({ archive, name, slug }: CardType) => {
@@ -45,13 +45,12 @@ export const CardArticleDetail = ({ archive, category, name, slug, content, auth
     const toPage = useRouter()
     return (
         <div className="w-full bg-white rounded-md p-2 shadow-md" onClick={() => toPage.push("/" + archive + "/" + slug)}>
-            <div className="text-sm">{moment(createAt).format("YYYY/MM/DD")}</div>
-            {category ? <div className='leading-4 text-sm  font-bold uppercase bg-three text-white w-max rounded-md py-1 px-2 '>{category}</div> : null}
-            <div className="font-serif text-four font-bold text-2xl ">{name}</div>
-
-            <div className="opacity-50 text-xm leading-5 border-t border-three mt-4 py-2">{author}</div>
+            <div className="font-serif text-four font-bold text-2xl uppercase">{name}</div>
+            {category ? <div className='leading-4 text-sm  font-bold uppercase bg-three text-white w-max rounded-md py-1 px-2 mb-1 '>{category}</div> : null}
             <div className="h-4"></div>
             <div className=" text-justify text-sm sm:text-base dangerous_box">{parse(content)}</div>
+            <div className="text-sm text-right">{moment(createAt).format("YYYY/MM/DD")}</div>
+            <div className="font-bold text-xm leading-5 mb-4 text-right">{author}</div>
         </div>)
 }
 export const CardItemTop = ({ archive, name, content, slug, createAt }: CardType) => {
