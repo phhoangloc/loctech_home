@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Giới thiệu về Blockchain",
+        "image": "/image/blockchain.jpg",
+        "slug": "gioi-thieu-blockchain",
+        "content": "Blockchain là công nghệ lưu trữ dữ liệu dạng chuỗi khối, đảm bảo tính minh bạch và an toàn.",
+        "category": "Blockchain",
+        "createdAt": "2025-09-01T10:00:00Z",
+        "author": "Hoang Loc"
+    },
+    {
+        "title": "Cơ bản về Machine Learning",
+        "image": "/image/ai.webp",
+        "slug": "co-ban-machine-learning",
+        "content": "Machine Learning giúp máy tính học từ dữ liệu và cải thiện hiệu suất mà không cần lập trình trực tiếp.",
+        "category": "AI",
+        "createdAt": "2025-08-28T09:30:00Z",
+        "author": "Nguyen Van A"
+    },
+    {
+        "title": "Node.js cho người mới bắt đầu",
+        "slug": "nodejs-cho-nguoi-moi",
+        "image": "/image/node.jpg",
+        "content": "Node.js là môi trường chạy JavaScript phía server, giúp xây dựng ứng dụng web nhanh và linh hoạt.",
+        "category": "Node",
+        "createdAt": "2025-08-25T08:45:00Z",
+        "author": "Tran Thi B"
+    },
+    {
+        "title": "React Hooks là gì?",
+        "image": "/image/react.png",
+        "slug": "react-hooks-la-gi",
+        "content": "React Hooks giúp bạn sử dụng state và các tính năng khác của React mà không cần viết class.",
+        "category": "React",
+        "createdAt": "2025-08-20T14:10:00Z",
+        "author": "Pham Van C"
+    },
+    {
+        "title": "Microservices Architecture",
+        "image": "/image/microservices.png",
+        "slug": "microservices-architecture",
+        "content": "Microservices chia ứng dụng thành các dịch vụ nhỏ, dễ bảo trì và triển khai độc lập.",
+        "category": "Microservices",
+        "createdAt": "2025-08-18T11:20:00Z",
+        "author": "Hoang Loc"
+    },
+    {
+        "title": "Docker và Containerization",
+        "image": "/image/docker.png",
+        "slug": "docker-va-containerization",
+        "content": "Docker giúp đóng gói ứng dụng và các phụ thuộc vào container, đảm bảo tính nhất quán khi triển khai.",
+        "category": "Docker",
+        "createdAt": "2025-08-15T13:50:00Z",
+        "author": "Nguyen Van A"
+    },
+    {
+        "title": "Tìm hiểu về GraphQL",
+        "image": "/image/blockchain.jpg",
+        "slug": "tim-hieu-graphql",
+        "content": "GraphQL là ngôn ngữ query cho API, cho phép client chỉ lấy đúng dữ liệu cần thiết.",
+        "category": "ADATABASE",
+        "createdAt": "2025-08-12T07:15:00Z",
+        "author": "Tran Thi B"
+    },
+    {
+        "title": "Kubernetes cho DevOps",
+        "image": "/image/blockchain.jpg",
+        "slug": "kubernetes-cho-devops",
+        "content": "Kubernetes là hệ thống quản lý container, hỗ trợ scale và quản lý ứng dụng phân tán.",
+        "category": "Microservices",
+        "createdAt": "2025-08-10T16:40:00Z",
+        "author": "Pham Van C"
+    },
+    {
+        "title": "Ethereum và Smart Contract",
+        "image": "/image/blockchain.jpg",
+        "slug": "ethereum-smart-contract",
+        "content": "Smart Contract là chương trình chạy trên blockchain Ethereum, giúp tự động hóa giao dịch.",
+        "category": "Blockchain",
+        "createdAt": "2025-08-05T12:00:00Z",
+        "author": "Hoang Loc"
+    },
+    {
+        "title": "REST API là gì?",
+        "image": "/image/blockchain.jpg",
+        "slug": "rest-api-la-gi",
+        "content": "REST API là kiến trúc phổ biến để xây dựng dịch vụ web, dựa trên HTTP và CRUD.",
+        "category": "API",
+        "createdAt": "2025-08-01T09:00:00Z",
+        "author": "Nguyen Van A"
+    }
+]

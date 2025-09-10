@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Apple ra mắt iPhone 16 với chip A18",
+        "slug": "apple-ra-mat-iphone-16-voi-chip-a18",
+        "content": "Apple vừa chính thức công bố iPhone 16 với hiệu năng vượt trội nhờ chip A18, cải thiện camera AI và pin bền hơn.",
+        "createdAt": "2025-09-01T09:00:00Z",
+        "author": "Tech News"
+    },
+    {
+        "title": "Google giới thiệu AI Gemini 3",
+        "slug": "google-gioi-thieu-ai-gemini-3",
+        "content": "Google nâng cấp mô hình AI Gemini lên phiên bản 3, tập trung vào tính đa phương thức và khả năng hỗ trợ lập trình nâng cao.",
+        "createdAt": "2025-09-02T10:30:00Z",
+        "author": "AI Insider"
+    },
+    {
+        "title": "Samsung phát triển màn hình gập siêu bền",
+        "slug": "samsung-phat-trien-man-hinh-gap-sieu-ben",
+        "content": "Samsung cho biết thế hệ màn hình gập mới có thể chịu được hơn 1 triệu lần gập mở mà không bị hỏng hóc.",
+        "createdAt": "2025-09-03T08:45:00Z",
+        "author": "Gadget Daily"
+    },
+    {
+        "title": "Microsoft cập nhật Windows 12",
+        "slug": "microsoft-cap-nhat-windows-12",
+        "content": "Microsoft tung ra bản cập nhật lớn cho Windows 12 với giao diện tối ưu hơn cho AI Copilot và hiệu suất chơi game.",
+        "createdAt": "2025-09-03T12:15:00Z",
+        "author": "Tech Radar"
+    },
+    {
+        "title": "OpenAI thử nghiệm công cụ tạo video từ văn bản",
+        "slug": "openai-thu-nghiem-cong-cu-tao-video-tu-van-ban",
+        "content": "OpenAI ra mắt phiên bản thử nghiệm công cụ AI có thể biến mô tả văn bản thành video ngắn chỉ trong vài giây.",
+        "createdAt": "2025-09-04T07:20:00Z",
+        "author": "AI Today"
+    }
+]

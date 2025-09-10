@@ -1,0 +1,10 @@
+[
+    {
+        "name": "profile",
+        "link": "/"
+    },
+    {
+        "name": "blog",
+        "link": "/blog"
+    }
+]
