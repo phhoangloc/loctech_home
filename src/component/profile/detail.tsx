@@ -66,7 +66,14 @@ const DetailProfile = () => {
     const updateItem = async (id: number, body: { name: string, slug: string, content: string, categoryId: number | undefined }) => {
 
         const result = await ApiUpdateItem({ position: _currentUser.position, archive: archive, id }, body)
-        console.log(result)
+        if (result.success) {
+            toPage.back()
+        } else {
+            store.dispatch(setNoti({ open: true, value: false, msg: "you have something wrong", type: "noti" }))
+            setTimeout(() => {
+                store.dispatch(setNoti({ open: false, value: false, msg: "", type: "noti" }))
+            }, 3000);
+        }
     }
 
     const toPage = useRouter()
@@ -96,7 +103,7 @@ const DetailProfile = () => {
         name: _name,
         slug: _slug,
         content: _new_content || _content,
-        categoryId: _categoryId
+        categoryId: _categoryId || 1
     }
 
     const [_category, set_category] = useState<{ name: string, id: number }[]>([])
@@ -146,5 +153,4 @@ const DetailProfile = () => {
         </div>
     )
 }
-
 export default DetailProfile

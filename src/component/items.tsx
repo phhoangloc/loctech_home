@@ -26,7 +26,7 @@ const Items = ({ archive, limit }: Props) => {
         <div className="">
             <div className="h-12"></div>
             <div className=" justify-end text-two/50 text-sm mb-1">news</div>
-            <div className="flex flex-col gap-3">
+            <div className="bg-white p-2">
                 {_items ?
                     _items.map((re, index) => <CardItemTop archive={re.archive} name={re.name} content={re.content} createAt={re.createdAt} key={index} category={''} author={''} slug={re.slug} />)
                     : null}

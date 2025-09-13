@@ -44,14 +44,14 @@ const Layout = ({ children }: Props) => {
                             {children}
                         </div>
                         <div className="hidden xl:block w-(--xl-lg)">
-                            <About />
+                            {/* <About /> */}
                         </div>
                     </div>
-                    <div className=" xl:hidden p-2 ">
+                    {/* <div className=" xl:hidden p-2 ">
                         <div className='w-full max-w-(--md) m-auto'>
                             <About />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             }
             <ModalNoti />

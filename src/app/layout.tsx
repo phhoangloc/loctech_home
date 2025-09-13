@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Crimson_Text, Roboto_Mono } from "next/font/google";
+import { Crimson_Pro, Roboto } from "next/font/google";
 import "../style/globals.css";
-import Header from "@/component/header";
 import Provider from "@/redux/component/provider";
 import Layout from "@/component/layout";
 
-const crimson = Crimson_Text({
+const crimson = Crimson_Pro({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
-const roboto = Roboto_Mono({
+const roboto = Roboto({
   variable: "--font-sans",
   subsets: ["latin"],
 });

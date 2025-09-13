@@ -25,10 +25,9 @@ export const CardArticleTop = ({ archive, category, name, slug, content, author,
     const toPage = useRouter()
     return (
         <div className="w-full bg-white rounded-md p-2 shadow-md cursor-pointer" onClick={() => toPage.push("/" + archive + "/" + slug)}>
-            <div className="text-sm">{moment(createAt).format("YYYY/MM/DD")}</div>
-            {category ? <div className='leading-4 text-sm  font-bold uppercase bg-three text-white w-max rounded-md py-1 px-2 '>{category}</div> : null}
-            <div className="font-serif text-four font-bold text-2xl uppercase">{name}</div>
-            <div className="opacity-50 text-xm leading-5">{author}</div>
+            {category ? <div className='text-sm  font-bold uppercase bg-four text-white w-max rounded-md px-2 pt-0.5 '>{category}</div> : null}
+            <div className="h-1"></div>
+            <div className="font-bold text-xl uppercase leading-6 font-serif">{name}</div>
             <div className="h-4"></div>
             <div className="h-21 line-clamp-4 text-justify text-sm">{parse(content.split("<p>")[1])}</div>
         </div>)
@@ -37,36 +36,40 @@ export const CardArticleProfile = ({ archive, name, slug }: CardType) => {
     const toPage = useRouter()
     return (
         <div className="w-full cursor-pointer flex gap-1" onClick={() => toPage.push("/profile/" + archive + "/" + slug)}>
-            <div className="font-semibold text-two/75 font-serif text-lg w-(--full-12) my-2.5">{name}</div>
+            <div className="font-semibold text-two/75  text-lg w-(--full-12) my-2.5">{name}</div>
             <div className="w-12 opacity-25 hover:opacity-100"><DeleteIcon className='!w-12 !h-12 p-2' /></div>
         </div>)
 }
-export const CardArticleDetail = ({ archive, category, name, slug, content, author, createAt }: CardType) => {
+export const CardArticleDetail = ({ archive, name, slug, content, author, createAt }: CardType) => {
     const toPage = useRouter()
     return (
-        <div className="w-full bg-white rounded-md p-2 shadow-md" onClick={() => toPage.push("/" + archive + "/" + slug)}>
-            <div className="font-serif text-four font-bold text-2xl uppercase">{name}</div>
-            {category ? <div className='leading-4 text-sm  font-bold uppercase bg-three text-white w-max rounded-md py-1 px-2 mb-1 '>{category}</div> : null}
-            <div className="h-4"></div>
-            <div className=" text-justify text-sm sm:text-base dangerous_box">{parse(content)}</div>
+        <div className="w-full bg-white rounded-md p-4 shadow-md" onClick={() => { if (slug) { toPage.push("/" + archive + "/" + slug) } }}>
+            <div className="text-two font-black text-2xl uppercase font-serif ">{name}</div>
+            {author ? <div className="flex gap-2">
+                <div className="h-6 w-6 rounded-[50%] bg-three"></div>
+                <div className="font-bold text-xm leading-5 h-6 flex flex-col justify-center">{author}</div>
+            </div> : null}
+            <div className="h-2"></div>
+            <div className=" text-justify dangerous_box font-serif">{parse(content)}</div>
             <div className="text-sm text-right">{moment(createAt).format("YYYY/MM/DD")}</div>
-            <div className="font-bold text-xm leading-5 mb-4 text-right">{author}</div>
         </div>)
 }
-export const CardItemTop = ({ archive, name, content, slug, createAt }: CardType) => {
-    const toPage = useRouter()
+export const CardItemTop = ({ name, slug }: CardType) => {
     return (
-        <div className="w-full bg-white rounded-md p-2 shadow-md cursor-pointer" onClick={() => toPage.push("/" + archive + "/" + slug)}>
-            <div className="font-serif text-three font-bold text-xl">{name}</div>
-            <div className="text-sm opacity-50">{moment(createAt).format("YYYY/MM/DD")}</div>
-            <div className="h-4"></div>
-            <div className="h-24 line-clamp-4 text-justify text-sm sm:text-base">{parse(content.split(".")[0])}</div>
-        </div>)
+        <Link href={slug} target='_blank'>
+            <div className="w-full cursor-pointer border-b border-three/25 py-2">
+                <div className='text-sm  font-bold uppercase bg-five  w-max rounded-md px-2 pt-0.5 '>news</div>
+                <div className=" font-serif font-bold text-xl">{parse(name)}</div>
+                <div className="text-sm opacity-50 ">{parse(name.split("-")[1] || "")}</div>
+            </div>
+        </Link>
+    )
 }
 export const LoginCard = () => {
 
     const [_username, set_username] = useState<string>("")
     const [_password, set_password] = useState<string>("")
+
 
     const [showPassword, setShowPassword] = useState<boolean>(false)
 

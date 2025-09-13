@@ -19,22 +19,25 @@ const Article = ({ blogName, limit }: Props) => {
             getItem(blogName, limit)
         } else {
             getItem("", limit)
+
         }
     }, [blogName, limit])
 
     return (
-        <div className="w-full">
-            <div className="h-12"></div>
-            <div className=" justify-end text-two/50 text-sm mb-1">{blogName ? blogName : "current article"} </div>
-            <div className="flex flex-col gap-3 w-full">
-                {_items.length ?
-                    _items.map((re, index) =>
-                        <CardArticleTop archive={re.archive} category={re.category.name} name={re.name} slug={re.slug} content={re.content} createAt={re.createdAt} author={re.host.username} key={index} />
-                    )
-                    : "there are no blog yet!"}
+        _items?.length ?
+            <div className="w-full">
+                <div className="h-12"></div>
+                <div className=" justify-end text-two/50 text-sm mb-1">{blogName ? blogName : "current article"} </div>
+                <div className="flex flex-col gap-3 w-full">
+                    {_items?.length ?
+                        _items.map((re, index) =>
+                            <CardArticleTop archive={re.archive} category={re.category.name} name={re.name} slug={re.slug} content={re.content} createAt={re.createdAt} author={re.host.username} key={index} />
+                        )
+                        : "there are no blog yet!"}
 
-            </div>
-        </div>
+                </div>
+            </div> :
+            null
     )
 }
 

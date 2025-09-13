@@ -29,51 +29,40 @@
 }
 
 .dangerous_box {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 24px;
 }
 
 .dangerous_box h1 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 900;
-  margin-top: 16px;
-  margin-bottom: 4px;
+  font-size: 1.5em;
+  font-weight: 700;
   line-height: 1.25;
-  opacity: 0.75;
+  margin: 12px 0 0;
 }
 
 .dangerous_box h2 {
-  font-family: var(--font-serif);
-  font-size: 1.175rem;
-  font-weight: bold;
-  margin-top: 12px;
-  margin-bottom: 4px;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 8px 0 0;
   line-height: 1.25;
-  opacity: 0.875;
 }
 
 .dangerous_box h3 {
-  font-family: var(--font-serif);
-  margin-top: 8px;
   line-height: 1.25rem;
-  font-size: 1.0875rem;
-  font-weight: bold;
-  margin-bottom: 4px;
-  opacity: 0.875;
+  font-size: 1.125em;
+  font-weight: 600;
+  margin: 8px 0 0;
 }
 
 .dangerous_box h4 {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: 700;
   margin: 4px 0;
 }
 
 .dangerous_box h5 {
-  font-family: var(--font-serif);
-  font-size: 0.875rem;
-  font-weight: bold;
+  font-size: 0.875em;
+  font-weight: 700;
 }
 
 .dangerous_box i {
@@ -100,8 +89,16 @@
 }
 
 .dangerous_box pre {
-  backdrop-filter: brightness(0.75);
-  padding: 12px;
+  /* border: 1px solid var(--color-five); */
+  backdrop-filter: brightness(0.95);
+  line-height: 0.375;
+  padding: 24px;
+  font-size: 0.875em;
+  overflow: auto;
+}
+
+.dangerous_box pre::-webkit-scrollbar {
+  display: none;
 }
 
 .dangerous_box pre pre {
@@ -110,6 +107,31 @@
 
 .dangerous_box pre pre div {
   margin: 0;
+}
+
+.dangerous_box p {
+  margin: 0px 0 4px;
+  line-height: 1.35;
+}
+
+.dangerous_box ol {
+  margin-bottom: 4px;
+}
+
+.dangerous_box ol li {
+  list-style: decimal;
+  list-style-position: inside;
+  line-height: 1.75rem;
+}
+
+.dangerous_box p strong {
+  font-weight: 700;
+}
+
+.dangerous_box figure,
+p {
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 body {

@@ -1,6 +1,8 @@
 'use client'
+import { ApiItem } from "@/api/client";
 import Article from "@/component/article";
-import Items from "@/component/items";
+import News from "@/component/news";
+import { useEffect, useState } from "react";
 
 export type ItemType = {
   archive: string,
@@ -17,12 +19,25 @@ export type ItemType = {
   }
 }
 export default function Home() {
+
+  const [_category, set_category] = useState<{ name: string }[]>([])
+  const getCategory = async () => {
+    const result = await ApiItem({ archive: "category" })
+    if (result.success) {
+      set_category(result.data)
+    }
+  }
+
+  useEffect(() => {
+    getCategory()
+  }, [])
+
   return (
 
     <div className=" max-w-(--md) " >
-      {/* <News limit={3} /> */}
-      <Article blogName="bài viết" limit={3} />
-      <Items archive="news" limit={3} />
+      <News limit={3} />
+      {/* <Article blogName="bài viết" limit={3} /> */}
+      {_category.map((_cate, index) => <Article blogName={_cate.name} limit={3} key={index} />)}
     </div>
   );
 }

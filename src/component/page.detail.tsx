@@ -29,7 +29,7 @@ const PageDetail = () => {
             <div className=" justify-end text-two/50 text-sm mb-1">{_item?.category?.name} </div>
             {
                 _item ?
-                    <CardArticleDetail archive={archive} category={""} name={_item?.name} slug={_item?.slug} content={_item?.content} createAt={_item?.createdAt} author={""} /> :
+                    <CardArticleDetail archive={archive} category={""} name={_item?.name} slug={""} content={_item?.content} createAt={_item?.createdAt} author={""} /> :
                     <div className='text-center font-bold font-serif text-2xl'>Page Not Found!</div>
             }
         </div>

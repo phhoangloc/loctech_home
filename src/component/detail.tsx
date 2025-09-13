@@ -26,19 +26,24 @@ const Detail = () => {
     return (
         <div className="w-full max-w-(--md)" >
             <div className="h-12"></div>
-            <div className=" justify-end text-two/50 text-sm mb-1">{_item?.category?.name} </div>
-            {_item ? <CardArticleDetail archive={archive} category={_item?.category?.name} name={_item?.name} slug={_item?.slug} content={_item?.content} createAt={_item?.createdAt} author={_item?.host.username} /> : null}
-            {archive === "blog" ?
-                <div className="h-12 flex gap-4">
-                    <div className="flex">
-                        <LikeOutline sx="p-2 fill-four" />
-                        <div className="h-full flex flex-col justify-center font-bold text-four">1</div>
-                    </div>
-                    <div className="">
-                        <Comment sx='p-2 fill-four' />
-                    </div>
-                </div> :
-                null}
+            <div className="flex flex-col-reverse md:flex-row gap-2">
+                {archive === "blog" ?
+                    <div className="h-max w-max flex md:flex-col sticky top-2">
+                        <div className="relative">
+                            <LikeOutline sx="p-2 fill-four cursor-pointer opacity-50 hover:opacity-100" />
+                            <div className="text-center text-white border-2 border-one rounded-[50%] flex flex-col justify-center font-bold absolute top-0 right-0 text-xs bg-four w-6 h-6">1</div>
+                        </div>
+                        <div className="">
+                            <Comment sx='p-2 fill-four cursor-pointer opacity-50 hover:opacity-100' />
+                        </div>
+                    </div> :
+                    null}
+                <div className="">
+                    <div className=" justify-end text-two/50 text-sm mb-1">{_item?.category?.name} </div>
+                    {_item ? <CardArticleDetail archive={archive} category={_item?.category?.name} name={_item?.name} slug={_item?.slug} content={_item?.content} createAt={_item?.createdAt} author={_item?.host.username} /> : null}
+                </div>
+            </div>
+
             {archive === "blog" ? <Article limit={3} /> : <Items archive={archive} limit={3} />}
         </div>
     )

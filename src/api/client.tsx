@@ -18,7 +18,10 @@ export const ApiLogin = async (body: { username: string, password: string }) => 
     })
     return result.data
 }
-
+export const ApiAlert = async () => {
+    const result = await axios.get(process.env.api_url + "api/alert")
+    return result.data
+}
 export const ApiSignup = async (body: { username: string, password: string, email: string }) => {
     const result = await axios.post(process.env.api_url + "api/signup", body, {
         headers: {
